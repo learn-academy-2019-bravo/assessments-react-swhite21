@@ -15,20 +15,23 @@
 
 
  var stuffArray = [42, "Arthur Dent", 1978, "Zaphod", "Vogon", "Marvin, the Paranoid Android"]
+// //
+// // stuffArray.map(function(el, i){
+// //   console.log(el + " is at index: " + i)
+// // })
 //
-// stuffArray.map(function(el, i){
-//   console.log(el + " is at index: " + i)
-// })
-
-// your for loop here, you can use the same stuffArray array
+// // your for loop here, you can use the same stuffArray array
 for(let i = 0; i < stuffArray.length; i++){
   console.log(stuffArray[i]);
 }
 
 // 3. Basic sorting: Find the cheapest price -- you are given a list of prices and need to find the signle lowest price from the array. Write a function that takes in an array of numbers, and returns the lowest price
-
-var steal = function(){
-
+const numArr = [5,7,9,4,6,3,7,12,15]
+var steal = function(arr){
   // your logic here
+let sortedArr = arr.sort((a, b) => a - b)
+let lowestPrice = `lowest price is ${sortedArr[0]}`
+return lowestPrice;
 
 }
+console.log(steal(numArr));
